@@ -1,0 +1,23 @@
+version: "3"
+services:
+  eastmoney:
+    image: non-action-quant:latest
+    networks:
+      - eastmoney_network
+    volumes:
+      - ./configs:/app/configs
+      - ./configs/localtime:/etc/localtime:ro
+    depends_on:
+      - ocr
+
+  ocr:
+    image: ocr_server:v1
+    networks:
+      - eastmoney_network
+    ports:
+      - "9898:9898"
+
+networks:
+  eastmoney_network:
+    driver: bridge
+
