@@ -2,7 +2,7 @@
 
 **Permission**
 Getting permission denied when typing docker on bash shell 
-![](./images/docker-permission.png)
+![](./assets/docker-permission.png)
 
 This is because the current user is not in the docker group.
 if current user have sudo authority,then you can add to the docker group with two ways below, bash command: 
@@ -23,7 +23,7 @@ Next switch to the current user: `su username`
 Verify that your user has been added to docker group by listing the users of the group with command `groups`. You probably have to log out and log in back again. Or user command `newgrp docker` to switch to docker group.
 
 If there is `docker` on the group list, it is ok.
-![](./images/groups.png)
+![](./assets/groups.png)
 
 If there still error.Then you can try the way below:
 `sudo chown root:docker /var/run/docker.sock`
