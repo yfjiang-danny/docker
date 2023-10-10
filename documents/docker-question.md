@@ -1,7 +1,7 @@
 ## Docker Question
 
-**Permission** 
-Getting permission denied when typing docker on bash shell 
+**Permission**<br/>
+Getting permission denied when typing docker on bash shell.<br/>
 ![](./assets/docker-permission.png)
 
 This is because the current user is not in the docker group.
@@ -35,7 +35,7 @@ su username
 
 Verify that your user has been added to docker group by listing the users of the group with command `groups`. You probably have to log out and log in back again. Or user command `newgrp docker` to switch to docker group.
 
-If there is `docker` on the group list, it is ok
+If there is `docker` on the group list, it is ok.<br/>
 ![](./assets/groups.png)
 
 If there still error.Then you can try the way below: 
